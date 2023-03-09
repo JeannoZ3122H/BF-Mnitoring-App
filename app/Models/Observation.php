@@ -10,6 +10,7 @@ class Observation extends Model
     use HasFactory;
 
     public $fileable = [
+        'name_author',
         'type_media',
         'name_media',
         'emission',
@@ -22,5 +23,5 @@ class Observation extends Model
         'docs_pdf',
         'comments',
         'decision_finale',
-    ];  
+    ];
 }

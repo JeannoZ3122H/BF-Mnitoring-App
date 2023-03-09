@@ -1,9 +1,40 @@
     <div class="mb-2 col-md-6 col-12">
 
+        <div class="mb-2">
+            <label for="formFileLg" class="form-label">Nom de l{{ ('\'') }}auteur</label>
+            <input class="form-control input-sw" id="formFileLg" name="name_author" type="text">
+        </div>
+
+        <div class="mb-2">
+            <label for="formFileLg" class="form-label">Selection du média</label>
+            <select class="form-select input-sw" name="type_media">
+                <option selected>Choississez un média</option>
+
+                <option value="{{ __('id') }}" class="fw-bolder">{{ __('type_media') }}</option>
+
+                {{--  <option value="AGENCE DE PRESSE" class="fw-bolder">AGENCE DE PRESSE</option>
+                <option value="TELEVISION" class="fw-bolder">TELEVISION</option>
+                <option value="RADIO" class="fw-bolder">RADIO</option>
+                <option value="PRESSE ECRITE" class="fw-bolder">PRESSE ECRITE</option>
+                <option value="PRESSE EN LIGNE" class="fw-bolder">PRESSE EN LIGNE</option>  --}}
+            </select>
+        </div>
+
+        <div class="mb-2">
+            <label for="formFileLg" class="form-label">Nom du médias</label>
+            <input class="form-control input-sw" id="formFileLg" name="name_media" type="text">
+        </div>
+
+        <div class="mb-2">
+            <label for="formFileLg" class="form-label">Nom de l{{ __('\'') }}émission</label>
+            <input class="form-control input-sw" id="formFileLg" name="emission" type="text">
+        </div>
+    </div>
+    <div class="mb-2 col-md-6 col-12">
         <!-- si choix_type_media = radio ou television -->
         <div class="mb-2">
             <label for="formFileLg" class="form-label">Date et heure de diffusion</label>
-            <input class="form-control input-sw" id="formFileLg" name="date_diffusions" type="text" placeholder="le jeudi 01 janvier 2023 à 15h">
+            <input class="form-control input-sw" id="formFileLg" name="date_diffusions" ype="text" placeholder="le jeudi 01 janvier 2023 à 15h">
         </div>
         <div class="mb-2 ">
             <label for="formFileLg" class="form-label">Ajouter un MP4 <span class="fw-bolder">(Vidéo)</span></label>

@@ -15,6 +15,7 @@ class CreateObservationsTable extends Migration
     {
         Schema::create('observations', function (Blueprint $table) {
             $table->id();
+            $table->string('name_author')->nullable();
             $table->string('type_media')->nullable();
             $table->string('name_media')->nullable();
             $table->string('emission')->nullable();

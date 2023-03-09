@@ -117,48 +117,23 @@
                                 <div class="form-group">
                                     <div class="col-12">
                                         <div class="row">
-                                            <div class="mb-2 col-md-6 col-12">
-                                                <div class="mb-2">
-                                                    <label for="formFileLg" class="form-label">Selection du média</label>
-                                                    <select class="form-select input-sw" name="type_media" wire:click="active">
-                                                        <option selected wire:model="type_media">Choississez un média</option>
 
-                                                        <option value="{{ __('id') }}" class="fw-bolder">{{ __('type_media') }}</option>
-
-                                                        {{--  <option value="AGENCE DE PRESSE" class="fw-bolder">AGENCE DE PRESSE</option>
-                                                        <option value="TELEVISION" class="fw-bolder">TELEVISION</option>
-                                                        <option value="RADIO" class="fw-bolder">RADIO</option>
-                                                        <option value="PRESSE ECRITE" class="fw-bolder">PRESSE ECRITE</option>
-                                                        <option value="PRESSE EN LIGNE" class="fw-bolder">PRESSE EN LIGNE</option>  --}}
-                                                    </select>
-                                                </div>
-
-                                                <div class="mb-2">
-                                                    <label for="formFileLg" class="form-label">Nom du médias</label>
-                                                    <input class="form-control input-sw" id="formFileLg" name="name_media" type="text">
-                                                </div>
-
-                                                <div class="mb-2">
-                                                    <label for="formFileLg" class="form-label">Nom de l{{ __('\'') }}émission</label>
-                                                    <input class="form-control input-sw" id="formFileLg" name="emission" type="text">
-                                                </div>
-                                            </div>
                                             {{--  @livewire('component', ['user' => $user], key($user->id))  --}}
                                             @livewire('contenu-article')
-                                            
+
                                             <div class="mb-2 col-md-6 col-12">
                                                 <!-- si choix_type_media = ecrite -->
                                                 <div class="mb-2 ">
                                                     <label for="formFileLg" class="form-label">Ajouter un Texte <span class="fw-bolder">(PDF, Excel, PowerPoint)</span></label>
                                                     <input class="form-control input-sw" id="formFileLg" name="docs_pdf" type="file">
                                                 </div>
-                                            </div>  
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="mb-2">
                                         <label for="exampleFormControlTextarea1" class="form-label">Commentaire </label>
-                                        <textarea class="form-control input-sw" name="comments" id="exampleFormControlTextarea1" rows="4" placeholder="Commentaire"></textarea>
+                                        <textarea class="form-control input-sw"wire:model="message" name="comments" id="exampleFormControlTextarea1" rows="4" placeholder="Commentaire"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">

@@ -6,23 +6,15 @@ use Livewire\Component;
 
 class ContenuArticle extends Component
 {
-
-    public $type_media = null;
+// 891d0a => rouge
+// 17154e => blue
+    public $message;
+    public $type_media;
     public $contenu = null;
-
-    public function active($value)
-    {
-        $this->type_media = $value;
-        
-        dd($this->type_media);
-        exit();
-    }
-    // dd($this->type_media);
-    // exit();
-
 
     public function render()
     {
+        $this->type_media;
         return view('livewire.contenu-article');
     }
 }

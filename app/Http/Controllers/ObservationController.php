@@ -11,54 +11,59 @@ class ObservationController extends Controller
 {
     public function Add_observation(Request $request)
     {
+        if (empty($request->name_author)) {
+            toast('Champ Obligatoire', 'error');
+
+            return back();
+        }
         if (empty($request->type_media)) {
             toast('Champ Obligatoire', 'error');
-            
+
             return back();
         }
         if (empty($request->name_media)) {
             toast('Champ Obligatoire', 'error');
-            
+
             return back();
         }
         if (empty($request->emission)) {
             toast('Champ Obligatoire', 'error');
-            
+
             return back();
         }
         // if (empty($request->date_diffusions)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->video)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->audio)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->text_faute)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->screenshot)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->url_article)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
         // if (empty($request->docs_pdf)) {
         //     toast('Champ Obligatoire', 'error');
-            
+
         //     return back();
         // }
 
@@ -66,6 +71,7 @@ class ObservationController extends Controller
 
         $add_observation->type_media = $request->type_media;
         $add_observation->name_media = $request->name_media;
+        $add_observation->name_author = $request->name_author;
         $add_observation->emission = $request->emission;
         $add_observation->date_diffusions = $request->date_diffusions;
         $add_observation->video = $request->video;
